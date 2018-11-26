@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/latoregular.woff2') format('woff2'),
+    url('../fonts/latoregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/latobold.woff2') format('woff2'),
+    url('../fonts/latobold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair-Display';
+    src: url('../fonts/playfairdisplayitalic.woff2') format('woff2'),
+    url('../fonts/playfairdisplayitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair-Display-Bold-Italic';
+    src: url('../fonts/playfairdisplaybolditalic.woff2') format('woff2'),
+    url('../fonts/playfairdisplaybolditalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
