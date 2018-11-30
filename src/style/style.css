@@ -32,6 +32,9 @@
 }
 
 .header__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-basis: 463px;
 }
 
@@ -205,7 +208,7 @@
     justify-content: center;
     align-items: center;
     width: 1em;
-    height: 0.9em;
+    height: 1em;
     fill: #d9bf8f;
     font-size: 35px;
     border : 2px solid #d9bf8f;
@@ -679,7 +682,7 @@
 
 .customers {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     max-width: 1290px;
@@ -687,6 +690,41 @@
     position: relative;
     background-color: #d9bf8f;
     padding: 31px 0 46px;
+    color: white;
+    font-size: 18px;
+    font-family: Playfair-Display, sans-serif;
+}
+
+.customers__after::before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 190px);
+    top: 0;
+    border: 190px solid transparent;
+    border-top: 30px solid #fff;
+    z-index: 5;
+}
+
+.fashion__description, .desiner__description {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    justify-content: center;
+}
+
+.desiner__description {
+    text-align: end;
+}
+.fashion__description_name, .desiner__description_name {
+    color: #000;
+    font-size: 30px;
+    font-family: Playfair-Display-Bold-Italic, sans-serif;
+}
+
+.fashion__description_profession, .desiner__description_profession {
+    color: #7f7e7e;
+    font-size: 14px;
+    font-family: Lato-Bold, sans-serif;
 }
 
 footer {
@@ -760,6 +798,25 @@ footer {
 
 .footer__bottom {
     height: 203px;
+    color: #353535;
+    font-size: 11px;
+    font-family: Lato-Regular, sans-serif;
+    padding-top: 35px;
+}
+
+.footer__bottom_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 160px;
+    margin-top: 25px;
+}
+
+.footer__bottom-icon {
+    width: 1em;
+    height: 1em;
+    font-size: 20px;
+    fill:#fff;
+    margin-right: 20px;
 }
 
             /*уши*/
@@ -776,3 +833,33 @@ footer {
     left: -50vw;
     right: -50vw;
 }
+
+/*
+#toTop {
+    display:none;
+    position:fixed;
+    bottom:120px;
+    right:75px;
+    overflow:hidden;
+    width:40px;
+    height:40px;
+    background-color: #090909;
+    border-right: 4px;
+    background:url(../images/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+    background:url(../images/ui.totop.png) no-repeat left -60px;
+    width:51px;
+    height:51px;
+    display:block;
+    overflow:hidden;
+    float:left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+    outline:none;
+}*/
