@@ -2,7 +2,6 @@ html {
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
-    font-family: "Roboto", Arial, sans-serif;
 }
 
 *, *::after, *::before {
