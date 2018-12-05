@@ -955,8 +955,21 @@
     height: 99%;
 }
 
-.collection__item:hover::before  {
+.collection__item:hover::before {
     opacity: 1;
+}
+.collection__item:hover > .collection__item-basket  {
+    background-color: #f0975c;
+}
+
+.collection__item:hover > .collection__item-basket::before {
+    border-bottom: 21px solid #f0975c;
+    border-right: 21px solid #f0975c;
+}
+
+.collection__item:hover > .collection__item-basket::after {
+    border-bottom: 21px solid #f0975c;
+    border-left: 21px solid #f0975c;
 }
 
 .collection__item-basket {
@@ -991,19 +1004,6 @@
     color: #fff;
     font-size: 14px;
     font-family: Lato-Bold, sans-serif;
-}
-
-.collection__item-basket:hover {
-    background-color: #f0975c;
-}
-.collection__item-basket:hover::before {
-    border-bottom: 21px solid #f0975c;
-    border-right: 21px solid #f0975c;
-}
-
-.collection__item-basket:hover::after {
-    border-bottom: 21px solid #f0975c;
-    border-left: 21px solid #f0975c;
 }
 
 .collection__item-label {
