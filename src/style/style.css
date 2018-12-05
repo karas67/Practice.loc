@@ -455,6 +455,130 @@
     margin-top: 55px;
 }
 
+@media screen and (max-width: 1260px) {
+    .slider__sale {
+        left: calc(50% - 110px);
+    }
+    .slider__sale_wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    .slider__sale_wrapper:before {
+        width: 195px;
+        height: 195px;
+    }
+    .slider__sale_season, .slider__sale_up {
+        font-size: 18px;
+    }
+    .slider__sale_sale {
+        margin: 10px 0;
+    }
+    .slider__sale_discont {
+        font-size: 20px;
+    }
+    .slider__form_button {
+        font-size: 20px;
+        padding: 10px 17px;
+        margin-top: 35px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .slider__sale {
+        left: calc(50% - 90px);
+        top: 18%;
+    }
+    .slider__sale_wrapper {
+        width: 180px;
+        height: 180px;
+    }
+    .slider__sale_wrapper:before {
+        width: 155px;
+        height: 155px;
+    }
+    .slider__sale_season, .slider__sale_up {
+        font-size: 16px;
+    }
+    .slider__sale_sale {
+        margin: 5px 0;
+        font-size: 45px;
+    }
+    .slider__sale_discont {
+        font-size: 16px;
+    }
+    .slider__form_button {
+        font-size: 17px;
+        padding: 8px 15px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .slider__sale {
+        left: calc(50% - 70px);
+        top: 18%;
+    }
+    .slider__sale_wrapper {
+        width: 140px;
+        height: 140px;
+    }
+    .slider__sale_wrapper:before {
+        width: 116px;
+        height: 116px;
+    }
+    .slider__sale_season, .slider__sale_up {
+        font-size: 12px;
+    }
+    .slider__sale_sale {
+        margin: 5px 0;
+        font-size: 25px;
+    }
+    .slider__sale_discont {
+        font-size: 16px;
+    }
+    .slider__form_button {
+        font-size: 12px;
+        padding: 7px 12px;
+        margin-top: 15px;
+    }
+    .slider__sale_up {
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .slider__sale {
+        left: calc(50% - 40px);
+        top: 20%;
+    }
+    .slider__sale_wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .slider__sale_wrapper:before {
+        top: 5px;
+        left: 5px;
+        width: 66px;
+        height: 66px;
+    }
+    .slider__sale_season, .slider__sale_up {
+        font-size: 9px;
+    }
+    .slider__sale_sale {
+        margin: 0;
+        font-size: 15px;
+    }
+    .slider__sale_discont {
+        font-size: 9px;
+    }
+    .slider__form_button {
+        font-size: 9px;
+        padding: 5px 10px;
+        margin-top: 12px;
+    }
+    .slider__sale_up {
+        margin: 5px;
+    }
+}
+
 
                         /*discont*/
 
@@ -751,7 +875,7 @@
         justify-self: start;
     }
     .featured__long::before, .featured__long_hover{
-        height: 95%;
+        height: 94.5%;
     }
 }
 
@@ -763,28 +887,45 @@
     .featured__long {
         grid-row: 1/2;
     }
+    .featured__long::before, .featured__long_hover {
+        width: 91.5%;
+    }
+    .featured__small::before, .featured__small_hover {
+        height: 89%;
+    }
     .featured__small, .featured__long {
         justify-self: center;
         align-self: start;
     }
 }
-@media screen and (max-width: 440px) {
+
+@media screen and (max-width: 500px) {
+    .featured__long::before, .featured__long_hover {
+        top: 20px;
+        left: 20px;
+        width: 90.5%;
+        height: 94%;
+    }
+
+}
+@media screen and (max-width: 420px) {
+    .featured {
+        grid-template-columns: 1fm;
+        grid-auto-rows: minmax(320px, auto);
+    }
     .featured__small::before, .featured__long::before {
-        border: none;
+        top: 15px;
+        left: 15px;
     }
     .featured__small_hover, .featured__long_hover {
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 99%;
+        top:15px;
+        left: 15px;
+    }
+    .featured__long {
+        grid-row: 5/6;
     }
 }
 
-@media screen and (max-width: 320px) {
-    .featured__small {
-        align-self: end;
-    }
-}
 
 
     /*collection*/
@@ -1127,10 +1268,15 @@ footer {
     line-height: 1.9;
 }
 
-.footer__top a {
+.shops__description_item a {
     color: #737373;
     font-family: Lato-Regular, sans-serif;
     font-size: 14px;
+    transition: text-decoration .5s, color .5s;
+}
+.shops__description_item a:hover {
+    text-decoration: underline;
+    color: #fff;
 }
 
 .footer__top_social {
@@ -1192,6 +1338,7 @@ footer {
     font-size: 12px;
     margin: 3px 3px 3px 0;
     outline:none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1350px) {
@@ -1240,18 +1387,26 @@ footer {
         margin: 0;
     }
     .shops__description, .informaion__description, .informaion__description {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.7s ease-in-out;
+        margin-bottom: 10px;
     }
     .footer__top h3 {
         margin-bottom: 10px;
+        cursor: pointer;
     }
     .footer__top_connected h3 {
        margin: 25px 0 30px;
     }
-    .footer__top_shops h3:after, .footer__top_informaion h3:after,
-    .footer__top_customer h3:after {
+    .footer__accordion:after {
         content: "+";
         padding-left: 15px;
+        font-size: 18px;
+    }
+    .footer__accordion.open::after{
+        content: "-";
+        font-size: 20px;
     }
     .footer__top_subsribe {
         margin: 25px
@@ -1285,6 +1440,51 @@ footer {
 @media screen and (max-width: 900px) {
     .footer__bottom {
         padding: 30px;
+    }
+}
+
+        /*scroll__up*/
+.scroll__up {
+    display: none;
+    position: fixed;
+    bottom: 122px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    background-color: #090909;
+    border-radius: 3px;
+    opacity: .9;
+}
+
+.scroll__bottom-icon {
+    display: block;
+    margin: 10px;
+}
+.scroll__bottom-icon svg {
+    width: 1em;
+    height: 1em;
+    font-size: 20px;
+    fill:#fff;
+}
+
+@media screen and (max-width: 1450px) {
+    .scroll__up {
+        bottom: 50px;
+        opacity: .8;
+    }
+}
+@media screen and (max-width: 500px) {
+    .scroll__up {
+        bottom: 40px;
+        width: 30px;
+        height: 30px;
+    }
+    .scroll__bottom-icon {
+        margin: 7.5px;
+    }
+    .scroll__bottom-icon svg {
+        font-size: 15px;
     }
 }
 
